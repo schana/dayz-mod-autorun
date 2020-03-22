@@ -1,0 +1,12 @@
+<modded_inputs>
+    <inputs>
+        <actions>
+            <input name="UASchanaAutorunToggle" loc="Autorun Toggle" />
+        </actions>
+    </inputs>
+    <preset>
+        <input name="UASchanaAutorunToggle">
+            <btn name="kAdd" />
+        </input>
+    </preset>
+</modded_inputs>
