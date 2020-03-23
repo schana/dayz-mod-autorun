@@ -7,7 +7,7 @@ modded class PlayerBase extends ManBase
         if (rpc_type == -44201)
         {
             Param3<bool, int, int> autorunParams;
-            if(!ctx.Read(schanaAutorunParams)) return;
+            if(!ctx.Read(autorunParams)) return;
             bool isRunning = autorunParams.param1;
             int movementIdx = autorunParams.param2;
             int angle = autorunParams.param3;

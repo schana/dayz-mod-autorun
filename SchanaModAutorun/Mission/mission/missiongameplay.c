@@ -2,9 +2,9 @@ modded class MissionGameplay extends MissionBase
 {
     ref array<string> m_SchanaAutorunInterruptInputs;
 
-    override void MissionGameplay()
+    override void OnInit()
     {
-        super.MissionGameplay();
+        super.OnInit();
         m_SchanaAutorunInterruptInputs = new array<string>;
         m_SchanaAutorunInterruptInputs.Insert("UASchanaAutorunToggle");
         m_SchanaAutorunInterruptInputs.Insert("UAMoveForward");
