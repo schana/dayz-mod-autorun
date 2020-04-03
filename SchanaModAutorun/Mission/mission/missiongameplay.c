@@ -70,8 +70,12 @@ modded class MissionGameplay extends MissionBase
         return false;
     }
 
-    protected int SchanaAutorunGetUpdatedSpeed()
+    protected int SchanaAutorunGetUpdatedSpeed(PlayerBase player)
     {
+        if(player.GetStaminaHandler().GetStamina() <= 0)
+        {
+            return DayZPlayerConstants.MOVEMENTIDX_RUN;
+        }
         if(SchanaCheckInput("UAWalkRunToggle"))
         {
             return DayZPlayerConstants.MOVEMENTIDX_WALK;
@@ -117,7 +121,7 @@ modded class MissionGameplay extends MissionBase
         }
         else if(player.SchanaIsAutorunning())
         {
-            int speed = SchanaAutorunGetUpdatedSpeed();
+            int speed = SchanaAutorunGetUpdatedSpeed(player);
             if(speed != DayZPlayerConstants.MOVEMENTIDX_IDLE)
             {
                 SchanaAutorunSync(true, speed, 1);
