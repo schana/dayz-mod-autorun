@@ -1,0 +1,12 @@
+[h1]SchanaModAutorun[/h1]
+
+An Open Source DayZ mod to provide autorun capabilities. Simply press the autorun key, and you no longer have to hold down a key to move forward. Keybinding is configurable by the player, defaulting to +.
+
+While Autorunning, you can adjust your speed using the sprint and slow modifiers (default left shift and left ctrl). If you run out of stamina, you will be dropped down to jogging speed.
+
+You are free to use this mod on your monetized servers. If you repack or use the code in a Derivative Work, you [b]must[/b] include the entire contents of the NOTICE file in a readable place in accordance with the Apache License.
+
+This mod originated from the Carim DayZ project
+The original source is at https://github.com/schana/dayz-mod-autorun
+To support this open source project, you can donate at https://paypal.me/cnofafva
+To learn more visit https://discord.gg/kdPnVu4
