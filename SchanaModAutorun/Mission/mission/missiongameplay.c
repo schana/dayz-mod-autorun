@@ -111,20 +111,23 @@ modded class MissionGameplay extends MissionBase
 
         PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
 
-        if(SchanaAutorunShouldInterrupt(player))
+        if (player)
         {
-            SchanaAutorunStop();
-        }
-        else if(SchanaAutorunShouldStart(player))
-        {
-            SchanaAutorunStart();
-        }
-        else if(player.SchanaIsAutorunning())
-        {
-            int speed = SchanaAutorunGetUpdatedSpeed(player);
-            if(speed != DayZPlayerConstants.MOVEMENTIDX_IDLE)
+            if(SchanaAutorunShouldInterrupt(player))
             {
-                SchanaAutorunSync(true, speed, 1);
+                SchanaAutorunStop();
+            }
+            else if(SchanaAutorunShouldStart(player))
+            {
+                SchanaAutorunStart();
+            }
+            else if(player.SchanaIsAutorunning())
+            {
+                int speed = SchanaAutorunGetUpdatedSpeed(player);
+                if(speed != DayZPlayerConstants.MOVEMENTIDX_IDLE)
+                {
+                    SchanaAutorunSync(true, speed, 1);
+                }
             }
         }
     }
