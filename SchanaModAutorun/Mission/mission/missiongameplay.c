@@ -72,7 +72,7 @@ modded class MissionGameplay extends MissionBase
 
     protected int SchanaAutorunGetUpdatedSpeed(PlayerBase player)
     {
-        if(player.GetStaminaHandler().GetStamina() <= 0)
+        if(player && (!player.CanSprint() || player.GetStaminaHandler().GetStamina() <= 0))
         {
             return DayZPlayerConstants.MOVEMENTIDX_RUN;
         }
