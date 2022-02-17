@@ -13,6 +13,8 @@ modded class MissionGameplay extends MissionBase
         m_SchanaAutorunInterruptInputs.Insert("UAMoveRight");
         m_SchanaAutorunInterruptInputs.Insert("UAFire");
         m_SchanaAutorunInterruptInputs.Insert("UATempRaiseWeapon");
+        m_SchanaAutorunInterruptInputs.Insert("UALeanLeft");
+        m_SchanaAutorunInterruptInputs.Insert("UALeanRight");
     }
 
     protected bool SchanaCheckInput(string inputName)
@@ -72,7 +74,7 @@ modded class MissionGameplay extends MissionBase
 
     protected int SchanaAutorunGetUpdatedSpeed(PlayerBase player)
     {
-        if(player.GetStaminaHandler().GetStamina() <= 0)
+        if(player && (!player.CanSprint() || player.GetStaminaHandler().GetStamina() <= 0))
         {
             return DayZPlayerConstants.MOVEMENTIDX_RUN;
         }
