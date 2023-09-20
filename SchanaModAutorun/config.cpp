@@ -12,9 +12,6 @@ class CfgMods
 {
 	class SchanaModAutorun
 	{
-		name = "SchanaModAutorun";
-		action = "https://github.com/schana/dayz-mod-autorun";
-		author = "schana";
 		type = "mod";
 		inputs = "SchanaModAutorun/Data/Inputs.xml";
 		dependencies[] =
@@ -28,14 +25,14 @@ class CfgMods
 			{
 				files[] =
 				{
-					"SchanaModAutorun/World"
+					"SchanaModAutorun/Scripts/4_world"
 				};
 			};
 			class missionScriptModule
 			{
 				files[] =
 				{
-					"SchanaModAutorun/Mission"
+					"SchanaModAutorun/Scripts/5_mission"
 				};
 			};
 		};

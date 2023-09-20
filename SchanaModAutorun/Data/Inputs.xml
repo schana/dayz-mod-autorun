@@ -7,7 +7,7 @@
     </inputs>
     <preset>
         <input name="UASchanaAutorunToggle">
-            <btn name="kAdd" />
+            <btn name="kF9" />
         </input>
     </preset>
 </modded_inputs>
